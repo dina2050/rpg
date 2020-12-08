@@ -1,6 +1,4 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Scanner;
 class Character {
     String name;
     int xp, money, mana, health;
@@ -37,9 +35,9 @@ class Sorcier extends Character {
         super(name, 100, 100, 50, 0);
     }
     char player = 'S';
+    @Override
     public int attack (){
-        xp+=1;
-        System.out.println(xp);
+        super.attack();
         return xp;
     }
     public char getSymbol(){
@@ -55,9 +53,9 @@ class Sorcier extends Character {
 
      }
      char player = 'E';
+     @Override
      public int attack (){
-         xp+=1;
-         System.out.println(xp);
+         super.attack();
          return xp;
      }
      public char getSymbol(){
